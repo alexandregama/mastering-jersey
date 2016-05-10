@@ -19,7 +19,7 @@ public class MainGrizzlyServer {
 		protocol = "http://";
 		host = Optional.ofNullable(System.getenv("HOSTNAME"));
 		port = Optional.ofNullable(System.getenv("PORT"));
-		path = "myapp";
+		path = "app";
 		BASE_URI = protocol + host.orElse("localhost") + ":" + port.orElse("8080") + "/" + path + "/";
 	}
 	

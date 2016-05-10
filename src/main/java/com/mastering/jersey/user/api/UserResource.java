@@ -1,4 +1,4 @@
-package com.mastering.jersey.user;
+package com.mastering.jersey.user.api;
 
 import java.util.Optional;
 
