@@ -24,7 +24,7 @@ public class MainGrizzlyServer {
 	}
 	
 	public static HttpServer startServer() {
-		ResourceConfig config = new ResourceConfig().packages("com.mastering.jersey.user");
+		ResourceConfig config = new ResourceConfig().packages("com.mastering.jersey.user", "com.mastering.jersey.payment");
 		
 		HttpServer server = GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), config);
 		
