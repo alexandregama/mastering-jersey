@@ -19,12 +19,12 @@ public class MainGrizzlyServer {
 		protocol = "http://";
 		host = Optional.ofNullable(System.getenv("HOSTNAME"));
 		port = Optional.ofNullable(System.getenv("PORT"));
-		path = "myapp";
+		path = "app";
 		BASE_URI = protocol + host.orElse("localhost") + ":" + port.orElse("8080") + "/" + path + "/";
 	}
 	
 	public static HttpServer startServer() {
-		ResourceConfig config = new ResourceConfig().packages("com.mastering.jersey.user");
+		ResourceConfig config = new ResourceConfig().packages("com.mastering.jersey.user", "com.mastering.jersey.payment");
 		
 		HttpServer server = GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), config);
 		
