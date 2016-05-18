@@ -7,7 +7,7 @@ import org.glassfish.grizzly.http.server.HttpServer;
 public class GrizzlyServerStarter {
 
 	public static void main(String[] args) throws IOException {
-		HttpServer server = MainGrizzlyServer.startServer();
+		HttpServer server = GrizzlyServerConfiguration.startServer();
 		System.out.println("Grizzly Server has been started!");
 		
 		System.in.read();

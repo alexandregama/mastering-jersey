@@ -7,7 +7,7 @@ import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
-public class MainGrizzlyServer {
+public class GrizzlyServerConfiguration {
 
 	public static final String BASE_URI;
 	private static final String protocol;
@@ -24,7 +24,7 @@ public class MainGrizzlyServer {
 	}
 	
 	public static HttpServer startServer() {
-		ResourceConfig config = new ResourceConfig().packages("com.mastering.jersey.user", "com.mastering.jersey.payment");
+		ResourceConfig config = new ResourceConfig().packages("com.mastering.jersey.user", "com.mastering.jersey.payment", "com.mastering.jersey.preference");
 		
 		HttpServer server = GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), config);
 		
